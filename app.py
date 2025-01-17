@@ -58,11 +58,12 @@ def home():
             education_encoded = label_encoders["Education"].transform([education])[0]
             self_employed_encoded = label_encoders["Self_Employed"].transform([self_employed])[0]
             property_area_encoded = label_encoders["Property_Area"].transform([property_area])[0]
+            coapplicant_income = int(request.form["coapplicant_income"])
 
-            # Create input array for prediction
             user_input = [[gender_encoded, married_encoded, dependents, education_encoded,
-                           self_employed_encoded, applicant_income, loan_amount, loan_amount_term,
-                           credit_history, property_area_encoded]]
+               self_employed_encoded, applicant_income, coapplicant_income,
+               loan_amount, loan_amount_term, credit_history, property_area_encoded]]
+
 
             # Predict using KNN
             prediction = knn.predict(user_input)
@@ -76,5 +77,5 @@ def home():
     return render_template("index.html", result=None)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(debug=True)
