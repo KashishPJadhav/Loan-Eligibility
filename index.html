@@ -8,9 +8,9 @@
     <title>Loan Approval Prediction</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
+<body style="padding:30px">
     <h1>Loan Approval Prediction</h1>
-    <form method="POST">
+    <form class="big" method="POST">
         <label>Gender:</label>
         <select name="gender" required>
             <option value="Male">Male</option>
@@ -31,7 +31,7 @@
         <label>Education:</label>
         <select name="education" required>
             <option value="Graduate">Graduate</option>
-            <option value="Non-Graduate">Non-Graduate</option>
+            <option value="Not Graduate">Non-Graduate</option>
             <option value="Unknown">Unknown</option>
         </select><br>
 
@@ -45,13 +45,17 @@
         <label>Applicant Income:</label>
         <input type="number" name="applicant_income" required><br>
 
+        <label>Coapplicant Income:</label>
+<input type="number" id="coapplicant_income" name="coapplicant_income" required><br>
+
+
         <label>Loan Amount:</label>
         <input type="number" name="loan_amount" required><br>
 
         <label>Loan Amount Term:</label>
         <input type="number" name="loan_amount_term" required><br>
 
-        <label>Credit History:</label>
+        <label>Credit History (0 for no,1 for yes):</label>
         <input type="number" name="credit_history" min="0" max="1" required><br>
 
         <label>Property Area:</label>
