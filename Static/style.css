@@ -4,6 +4,17 @@ body {
     padding: 20px;
     background-color: #af8686;
 }
+.container {            
+    background-color:#3546ab;
+    color: rgb(21, 16, 16);
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
 form.big {
     line-height: 1.8;
   }
