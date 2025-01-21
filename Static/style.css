@@ -1,22 +1,25 @@
+/* General Body Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
     padding: 20px;
     background-color: #ab91b3;
 }
-.H{
-    background-color:#743569;
+
+.H {
+    background-color: #743569;
     color: white;
     padding: 20px;
-    font-size:30px;
+    font-size: 30px;
     border-radius: 5px;
-    width: 70%; /* Take full width of the container */
-
+    width: 70%;
 }
+
 .container {
     display: flex;
     height: 100vh;
 }
+
 .left-panel {
     flex: 2;
     background-color: white;
@@ -26,8 +29,9 @@ body {
     align-items: center;
     padding: 20px;
 }
+
 .right-panel {
-    background-color:#743569;
+    background-color: #743569;
     color: white;
     flex: 1;
     display: flex;
@@ -37,53 +41,134 @@ body {
     text-align: center;
     padding: 20px;
 }
+
 .right-panel img {
-    width:90%;
-    height:50%;
+    width: 90%;
+    height: 50%;
     max-width: 220px;
     margin-bottom: 20px;
 }
-.left-panel h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-.left-panel p {
-    font-size: 16px;
-    line-height: 1.5;
-}
 .form-container {
-    width: 100%; /* Ensure it takes full width of its container */
-    max-width: 600px; /* Increase the maximum width */
-    margin: 0 auto; /* Center the form */
+    width: 70%; /* Adjust as necessary */
+    max-width: 800px; /* Limit maximum width */
+    min-width: 300px; /* Ensure readability on smaller screens */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #dbc1dc; /* Match the theme */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.form-header {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #4c004c;
+}
+
+.form-field {
+    width: 100%;
+    max-width: 500px; /* Ensures form fields don't become too large */
+    margin-bottom: 15px;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: #4c004c;
+}
+
+.form-field input, .form-field select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    width: 50%; /* Proportional button size */
+    max-width: 200px;
+    padding: 10px;
+    font-size: 1em;
+    color: white;
+    background-color: #4c004c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.submit-button:hover {
+    background-color: #702070;
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+    }
+
+    .submit-button {
+        width: 80%;
+    }
+}
+
+form label {
+    display: inline-block;
+    width: 150px; /* Adjust width to align labels */
+    text-align: left;
+    margin-bottom: 10px;
+}
 form {
     margin-top: 20px;
     background-color: #a691a9;
-    height:60%;
-    line-height:2;
-    padding: 30px; /* Increase padding for more space */
-    width: 80%; /* Take full width of the container */
-    border-radius: 10px; /* Add some rounding for better appearance */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a slight shadow for depth */
+    height: 60%;
+    line-height: 2;
+    padding: 30px;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-label {
-    font-weight: bold;
-}
-
 h1, h2 {
     color: #333;
 }
 
-#button {
-  padding: 10px;
-  border: 1px solid rgb(160, 167, 61);
-  background-color:#6b9ab4;
-  border-radius: 5px;
-  font: inherit;
+/* Styling for Input Fields */
+form input[type="number"], form select {
+    display: inline-block;
+    width: calc(100% - 160px); /* Ensure alignment with labels */
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid #743569;
+    background-color: transparent;
+    outline: none;
+    padding: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Align input lines with their fields */
+form input[type="number"]:focus, form select:focus {
+    border-bottom: 2px solid #45a049;
+}
+/* Styling for Buttons */
+button {
+    padding: 10px;
+    border: 2px solid #743569; /* Purple border */
+    background-color: white; /* White background */
+    color: #743569;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 3px; /* Add space between the button and form */
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #743569; /* Purple background on hover */
+    color: white; /* White text on hover */
 }
